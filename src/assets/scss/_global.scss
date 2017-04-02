@@ -61,7 +61,7 @@ button, a.button {
   }
 
   &:active,
-  .active {
+  &.active {
     border-color: darken($lightgrey, 5%);
     background: $white;
     color: darken($text-color, 10%);

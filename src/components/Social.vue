@@ -31,18 +31,18 @@
 
   aside.social {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.75rem;
+    right: 0.75rem;
     text-align: right;
   }
 
   a.button {
     @include vr-margin(0 0 $mod-xxs);
-    width: 140px;
+    width: 100px;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 
     i {
       margin-right: 0.4rem;

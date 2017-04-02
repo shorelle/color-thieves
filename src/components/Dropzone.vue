@@ -45,7 +45,7 @@ https://github.com/rowanwins/vue-dropzone -->
     },
     mounted() {
       if (this.$isServer) return
-      var Dropzone = require('dropzone')
+      var Dropzone = window.Dropzone
       Dropzone.autoDiscover = false
       var element = document.getElementById(this.id)
       this.dropzone = new Dropzone(element, this.dropzoneOptions)
@@ -142,6 +142,18 @@ https://github.com/rowanwins/vue-dropzone -->
     width: 100%;
   }
 
+  .dz-image {
+    transition: opacity 0.2s ease-in-out;
+
+    .dz-processing & {
+      opacity: 0.5;
+    }
+
+    .dz-complete & {
+      opacity: 1;
+    }
+  }
+
   .dz-progress {
     position: absolute;
     top: 50%;
@@ -172,7 +184,7 @@ https://github.com/rowanwins/vue-dropzone -->
 
   @keyframes ellipsis {
     to {
-      width: 1em;
+      width: 1.1em;
     }
   }
 </style>
