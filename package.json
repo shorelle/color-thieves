@@ -1,12 +1,7 @@
 {
-  "name": "color-thief",
-  "version": "2.0.2",
-  "author": {
-    "name": "Lokesh Dhakar",
-    "email": "lokesh.dhakar@gmail.com",
-    "url": "http://lokeshdhakar.com/"
-  },
-  "description": "Get the dominant color or color palette from an image.",
+  "name": "color-thieves",
+  "version": "1.0.0",
+  "description": "Interface for lokesh's color-thief dominant color picker",
   "keywords": [
     "color",
     "palette",
@@ -16,28 +11,66 @@
     "photo",
     "canvas"
   ],
-  "homepage": "http://lokeshdhakar.com/projects/color-thief/",
+  "author": "shorelle",
+  "scripts": {
+    "dev": "node build/dev-server.js",
+    "build": "node build/build.js"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lokesh/color-thief.git"
+    "url": "https://github.com/shorelle/color-thieves.git"
   },
-  "bugs": {
-    "url": "https://github.com/lokesh/color-thief/issues"
+  "license": "MIT",
+  "dependencies": {
+    "dropzone": "^4.3.0",
+    "vue": "^2.2.2"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://raw.githubusercontent.com/lokesh/color-thief/master/LICENSE/"
-    }
-  ],
-  "main": "dist/color-thief.min.js",
   "devDependencies": {
-    "grunt": "~1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-uglify": "~2.0.0",
-    "grunt-contrib-jshint": "~1.0.0",
-    "grunt-jscs": "^1.8.0",
-    "grunt-contrib-jshint": "^0.11.2"
-  }
+    "autoprefixer": "^6.7.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-env": "^1.2.1",
+    "babel-preset-stage-2": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "chalk": "^1.1.3",
+    "connect-history-api-fallback": "^1.3.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "css-loader": "^0.26.1",
+    "eventsource-polyfill": "^0.9.6",
+    "express": "^4.14.1",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.10.0",
+    "friendly-errors-webpack-plugin": "^1.1.3",
+    "function-bind": "^1.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "http-proxy-middleware": "^0.17.3",
+    "modernizr": "^3.4.0",
+    "modernizr-loader": "^1.0.1",
+    "node-sass": "^4.5.1",
+    "opn": "^4.0.2",
+    "optimize-css-assets-webpack-plugin": "^1.3.0",
+    "ora": "^1.1.0",
+    "rimraf": "^2.6.0",
+    "sass-loader": "^6.0.3",
+    "semver": "^5.3.0",
+    "url-loader": "^0.5.7",
+    "vue-loader": "^11.1.4",
+    "vue-style-loader": "^2.0.0",
+    "vue-template-compiler": "^2.2.4",
+    "webpack": "^2.2.1",
+    "webpack-bundle-analyzer": "^2.2.1",
+    "webpack-dev-middleware": "^1.10.0",
+    "webpack-hot-middleware": "^2.16.1",
+    "webpack-merge": "^2.6.1"
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 9"
+  ]
 }

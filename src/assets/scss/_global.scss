@@ -1,0 +1,69 @@
+/* 
+ * Global
+ * ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: $offwhite;
+  color: $text-color;
+}
+
+.container {
+  @include container();
+}
+
+a {
+  color: $primary-color;
+  font-weight: normal;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: normal;
+  text-transform: lowercase;
+}
+
+.highlight {
+  color: $primary-color;
+}
+
+.hidden {
+  height: 0;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+button, a.button {
+  @include vr-padding($mod-xxxs 1);
+  display: block;
+  float: left;
+  outline: none;
+  text-decoration: none;
+  appearance: none;
+  border: 3px solid $lightgrey;
+  background: none;
+  color: $text-color;
+
+  &:hover,
+  &:focus {
+    border-color: darken($lightgrey, 5%);
+    color: darken($text-color, 10%);
+    cursor: pointer;
+  }
+
+  &:active,
+  .active {
+    border-color: darken($lightgrey, 5%);
+    background: $white;
+    color: darken($text-color, 10%);
+  }
+}
