@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p><span class="highlight">//</span> a <a href="http://vuejs.org" target="_blank">vue.js</a> project by <a href="http://shorelle.net" target="_blank">desiree</a></p>
+    <p><span class="highlight">//</span> a <a href="https://vuejs.org" target="_blank">vue.js</a> project by <a href="http://shorelle.net" target="_blank">desiree</a></p>
   </footer>
 </template>
 

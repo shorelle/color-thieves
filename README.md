@@ -1,11 +1,11 @@
 # color-thieves
 
-Just a simple web interface for the [color-thief](http://lokeshdhakar.com/projects/color-thief) script by lokesh. Built as a small experiment with [Vue.js](http://vuejs.org)
+A simple web interface for the [color-thief](https://github.com/lokesh/color-thief) script by lokesh. Built as a small experiment with [Vue.js](https://vuejs.org)
 
 * Drag and drop (or click to upload as usual)
 * Displays dominant color and 6 additional palette colors
 * Toggle between Hexadecimal, RGB and HSL values
-* Copy values to clipboard by clicking the swatch
+* Copy value to clipboard by clicking the color swatch
 
 ## About Color Thief
 
