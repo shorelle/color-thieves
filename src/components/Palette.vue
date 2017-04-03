@@ -1,7 +1,7 @@
 <template>
   <div class="result" :class="type">
     <h3>{{ heading }}</h3>
-    <button v-for="color in formattedColors" type="button" :class="color.class" :style="color.styleObject" @click="copy(color)">{{ color.label }} <i class="fa fa-clipboard" aria-hidden="true"></i></button>
+    <button v-for="color in formattedColors" type="button" :class="color.class" :style="color.styleObject" @click="copy(color)">{{ color.label }}</button>
   </div>
 </template>
 
@@ -111,6 +111,8 @@
       position: relative;
       border: 0;
       text-transform: uppercase;
+      transform: scale(1);
+      transition: all 0.2s ease-in-out;
 
       &.light {
         color: $offblack;
@@ -120,23 +122,25 @@
         color: $white;
       }
 
-      i {
+      &:after {
+        content: '\21d2';
         position: absolute;
-        right: 1.5rem;
-        display: inline-block;
-        margin-top: $base-font-size / 3;
         opacity: 0;
-        transform: scale(1);
-        transition: all 0.2s ease-in-out;
+        width: 0;
+        margin-left: 0.25em;
+        transition: all 0.1s ease-in-out;
       }
 
       &:hover,
       &:focus {
-        i { opacity: 0.5; }
+        &:after {
+          width: 1em;
+          opacity: 1;
+        }
       }
 
       &:active {
-        i { animation: clicked 0.2s; }
+        transform: scale(1.02);
       }
     }
   }
@@ -148,16 +152,5 @@
   .palette button {
     width: 50%;
     font-size: 0.75rem;
-
-    i {
-      right: 0.75rem;
-      margin-top: $base-font-size * 0.75 / 3;
-    }
-  }
-
-  @keyframes clicked {
-    to {
-      transform: scale(1.2);
-    }
   }
 </style>
