@@ -30,10 +30,20 @@
   @import '../assets/scss/main.scss';
 
   aside.social {
+    @include responsive-columns('mobile', 1);
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
     text-align: right;
+
+    @include respond-to('mobile') {
+      position: relative;
+      top: 0;
+      right: auto;
+      text-align: center;
+
+      br { display: none; }
+    }
   }
 
   a.button {
@@ -46,6 +56,12 @@
 
     i {
       margin-right: 0.4rem;
+    }
+
+    @include respond-to('mobile') {
+      display: inline-block;
+      margin-bottom: 0;
+      float: none;
     }
   }
 

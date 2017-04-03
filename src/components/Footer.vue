@@ -15,5 +15,9 @@
     @include columns(12);
     @include vr-margin(0 0 $mod-l);
     border-top: 1px solid $lightgrey;
+
+    @include respond-to('mobile') {
+      @include vr-margin(0 5% $mod-s);
+    }
   }
 </style>

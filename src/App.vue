@@ -70,14 +70,26 @@
 
   main {
     @include vr-margin($mod-l 0 $mod-xl);
-    @include columns(12,0,0);
+    @include columns(12, 0, 0);
+
+    @include respond-to('mobile') {
+      @include vr-margin(1 0);
+    }
   }
 
   .image-drop {
     @include columns(7);
+    @include responsive-columns('tablet-landscape', 6);
+    @include responsive-columns('mobile', 1);
+
+    @include respond-to('mobile') {
+      @include vr-margin(0 5% $mod-s);
+    }
   }
 
   .image-results {
-    @include columns(4.5,0.5);
+    @include columns(4.5, 0.5);
+    @include responsive-columns('tablet-landscape', 6);
+    @include responsive-columns('mobile', 1);
   }
 </style>

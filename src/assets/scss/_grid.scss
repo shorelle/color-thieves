@@ -31,12 +31,12 @@ $grid-settings: (
   ),
   tablet-portrait: (
     container-columns: 12,
-    gutter: 5%,
+    gutter: 2%,
     max-width: 650px,
   ),
   mobile: (
     container-columns: 1,
-    gutter: 5%,
+    gutter: 5%
   )
 );
 

@@ -18,6 +18,10 @@
   header {
     @include columns(12);
     @include vr-margin($mod-l 0 0);
+
+    @include respond-to('mobile') {
+      @include vr-margin(1 5% 0);
+    }
   }
 
   h1 {
@@ -25,6 +29,10 @@
     margin: 0;
     font-family: $heading-font;
     text-shadow: -4px 0 0 $white;
+
+    @include respond-to('mobile') {
+      @include vr-font-size($h2-font-size);
+    }
   }
 
   .subtitle {

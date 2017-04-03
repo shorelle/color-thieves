@@ -129,6 +129,10 @@
         width: 0;
         margin-left: 0.25em;
         transition: all 0.1s ease-in-out;
+
+        @include respond-to('tablet-portrait') {
+          display: none;
+        }
       }
 
       &:hover,

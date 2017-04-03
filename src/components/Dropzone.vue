@@ -134,6 +134,10 @@ https://github.com/rowanwins/vue-dropzone -->
 
   .dz-message {
     @include vr-padding($mod-xl 1);
+
+    @include respond-to('mobile') {
+       @include vr-padding($mod-l 1);
+    }
   }
 
   .dz-preview {
