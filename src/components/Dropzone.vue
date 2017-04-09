@@ -144,6 +144,8 @@ https://github.com/rowanwins/vue-dropzone -->
     position: relative;
     float: left;
     width: 100%;
+    background: $lightgrey;
+    min-height: $base-line-height * $mod-l * 6;
   }
 
   .dz-image {
@@ -169,7 +171,10 @@ https://github.com/rowanwins/vue-dropzone -->
     opacity: 1;
     transition: opacity 0.2s ease-in-out;
 
-    span { display: block; }
+    span { 
+      display: block;
+      animation: blink 1.5s linear infinite;
+    }
 
     .dz-complete & {
       opacity: 0;
@@ -184,6 +189,10 @@ https://github.com/rowanwins/vue-dropzone -->
     font-family: $heading-font;
     animation: ellipsis steps(4, end) 900ms infinite;
     width: 0;
+  }
+
+  @keyframes blink {
+    50% { opacity: 0.2; }
   }
 
   @keyframes ellipsis {
