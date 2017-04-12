@@ -111,6 +111,10 @@ https://github.com/rowanwins/vue-dropzone -->
     color: darken($text-color, 10%);
     text-align: center;
 
+    @include respond-to('tablet-portrait') {
+      @include vr-font-size($h4-font-size);
+    }
+
     &:hover {
       background: lighten($lightgrey, 5%);
       border-color: $white;
@@ -135,8 +139,12 @@ https://github.com/rowanwins/vue-dropzone -->
   .dz-message {
     @include vr-padding($mod-xl 1);
 
-    @include respond-to('mobile') {
+    @include respond-to('tablet-landscape') {
        @include vr-padding($mod-l 1);
+    }
+
+    @include respond-to('tablet-portrait') {
+       @include vr-padding($mod-xl 1);
     }
   }
 
@@ -146,6 +154,10 @@ https://github.com/rowanwins/vue-dropzone -->
     width: 100%;
     background: $lightgrey;
     min-height: $base-line-height * $mod-l * 6;
+
+    @include respond-to('tablet-landscape') {
+      min-height: $base-line-height * $mod-l * 3;
+    }
   }
 
   .dz-image {

@@ -34,6 +34,7 @@
     position: absolute;
     top: 0.75rem;
     right: 0.75rem;
+    width: 100px;
     text-align: right;
 
     @include respond-to('mobile') {
@@ -48,7 +49,7 @@
 
   a.button {
     @include vr-margin(0 0 $mod-xxs);
-    width: 100px;
+    width: 100%;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
